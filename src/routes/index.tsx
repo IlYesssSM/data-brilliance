@@ -57,7 +57,7 @@ const offers = [
       "Formation rapide à l’utilisation",
     ],
     audience: "PME, commerces, associations, cabinets, restaurants, industrie et salles de sport.",
-    accent: "offer-green",
+    accentClass: "bg-offer-green/15 text-offer-green",
   },
   {
     letter: "B",
@@ -67,7 +67,7 @@ const offers = [
       "Les données sont centralisées et le reporting s’actualise automatiquement, ou avec un minimum d’intervention.",
     features: ["Excel et Power Query", "Python", "VBA si pertinent", "Power BI", "Process documenté"],
     audience: "Équipes qui consolident encore leurs chiffres manuellement chaque semaine ou chaque mois.",
-    accent: "offer-yellow",
+    accentClass: "bg-offer-yellow/15 text-offer-yellow",
   },
   {
     letter: "C",
@@ -83,7 +83,7 @@ const offers = [
       "Requêtes SQL et préparation Power BI",
     ],
     audience: "Structures avec plusieurs fichiers, sources ou formats qui ne communiquent pas entre eux.",
-    accent: "offer-blue",
+    accentClass: "bg-offer-blue/15 text-offer-blue",
   },
 ];
 
@@ -300,7 +300,7 @@ function Index() {
               {offers.map((offer) => (
                 <article key={offer.letter} className="group flex flex-col border border-border bg-background p-6 transition-all hover:-translate-y-1 hover:border-primary/60 sm:p-7">
                   <div className="flex items-center justify-between">
-                    <span className={`grid size-9 place-items-center rounded-full bg-${offer.accent}/15 font-mono text-sm font-bold text-${offer.accent}`}>
+                    <span className={`grid size-9 place-items-center rounded-full font-mono text-sm font-bold ${offer.accentClass}`}>
                       {offer.letter}
                     </span>
                     <Workflow className="size-5 text-muted-foreground transition-colors group-hover:text-primary" strokeWidth={1.5} aria-hidden="true" />
