@@ -1,124 +1,60 @@
-# Data Brilliance
+# Ilyes Lakhdar — Portfolio Data Analyst freelance
 
-Je suis un jeune Data Analyst qui souhaite lancer son projet d'indépendant/freelance.
+Site vitrine de mon activité de Data Analyst freelance à Grenoble : dashboards Power BI, automatisation du reporting et préparation des données.
 
-Pour cela j'ai besoin d'un portfolio clair et structuré sur mon profil, mes précédentes expériences et mes futures offres de prestations, qui attirera les recruteurs.
+**Profil LinkedIn :** [ilyes-lakhdar](https://www.linkedin.com/in/ilyes-lakhdar-71638b26a/)
 
-Créer moi un site web que les recruteurs pourront directement consulter via mon Linkedin afin d’explorer mon profil freelance a travers mes compétences et ma spécialisation en automatisation de reporting et de création d’application IA.
+## Contenu du site
 
-Voici mon profil Linkedin qui t’aidera dans l’initialisation de la structure de mes projets/expériences et de mes compétences ; https://www.linkedin.com/in/ilyes-lakhdar-71638b26a/
+| Section | Contenu |
+|---|---|
+| Accueil | Spécialisation, disponibilité, message personnel |
+| Expertise | Décisionnel, data engineering, automatisation & IA |
+| Parcours | Expériences et projets (Ville de Grenoble, BUT Science des Données…) |
+| Offres | A · Dashboard Power BI — B · Automatisation du reporting — C · Préparation des données |
+| Contact | Prise de contact via LinkedIn |
 
-Le site doit avoir 1) une page d’accueil présentant ma spécialisation et mes competences. 2) Une section de redirection vers mes experiences (Titre, paragraphes résumé) 3) En bas de pages mes offres de prestation (🟢 Offre A — Dashboard Power BI
+## Stack
 
-« Transformez vos fichiers Excel en tableau de bord »
+- [TanStack Start](https://tanstack.com/start) (React 19, SSR) + TypeScript
+- Tailwind CSS v4
+- Icônes [Lucide](https://lucide.dev)
+- Déploiement Cloudflare via Nitro, édition visuelle avec [Lovable](https://lovable.dev)
 
-Inclus :
+## Lancer le projet en local
 
-analyse des fichiers ;
-
-nettoyage des données ;
-
-Power Query ;
-
-modèle de données ;
-
-KPI ;
-
-mesures DAX ;
-
-dashboard interactif ;
-
-formation rapide à l'utilisation.
-
-Client idéal
-
-PME ;
-
-commerce ;
-
-association ;
-
-cabinet ;
-
-restaurant ;
-
-entreprise industrielle ;
-
-salle de sport ;
-
-entreprise utilisant beaucoup Excel.
-
-
-
-
-🟡 Offre B — Automatisation du reporting
-
-« Réduisez le temps passé à préparer vos reportings »
-
-Les données sont centralisées et le reporting est actualisé automatiquement ou avec un minimum d'intervention.
-
-Technologies :
-
-Excel ;
-
-Power Query ;
-
-Python ;
-
-VBA si pertinent ;
-
-Power BI.
-
-
-
-
-🔵 Offre C — Préparation et structuration des données
-
-« Vos données sont désorganisées ? Je les prépare pour l'analyse »
-
-nettoyage ;
-
-fusion de fichiers ;
-
-suppression des doublons ;
-
-standardisation ;
-
-création d'identifiants ;
-
-structuration relationnelle ;
-
-requêtes SQL ;
-
-préparation pour Power BI.)
-
-
-
-Direction sombre avec base noire, surfaces profondes et accents bleu électrique.
-
-Introduction éditoriale avec signature, disponibilité et message personnel.
-
-Grille immersive de projets avec dégradés bleus, bordures fines et effets de survol.
-
-Fondation réutilisable : palette de couleurs, styles de texte et carte projet configurable.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/a2e5eafe-1bff-4b39-8ca7-7e12f5653730).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Prérequis : Node.js 22+ ou [Bun](https://bun.sh).
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+git clone https://github.com/IlYesssSM/data-brilliance.git
+cd data-brilliance
+bun install        # ou npm install
+bun run dev        # ou npm run dev
 ```
+
+| Commande | Rôle |
+|---|---|
+| `bun run dev` | Serveur de développement |
+| `bun run build` | Build de production |
+| `bun run preview` | Prévisualiser le build |
+| `bun run lint` | Vérification ESLint / Prettier |
+
+## Structure
+
+```
+src/
+├── routes/
+│   ├── __root.tsx     # Layout HTML, métadonnées globales, pages 404 / erreur
+│   └── index.tsx      # Page unique du portfolio (sections + contenus)
+├── lib/site.ts        # URL publique du site (utilisée pour l'image de partage)
+├── assets/            # Visuel de l'en-tête
+└── styles.css         # Thème (couleurs, typographies, effets)
+public/
+└── og-image.jpg       # Image d'aperçu pour LinkedIn et les réseaux sociaux
+```
+
+Les contenus (compétences, offres, projets) sont définis sous forme de tableaux en haut de `src/routes/index.tsx` : il suffit de les modifier pour mettre à jour le site.
+
+## Configuration
+
+Renseigner l'URL publique du site dans `src/lib/site.ts` (`SITE_URL`) pour que l'image d'aperçu s'affiche quand le lien est partagé sur LinkedIn.

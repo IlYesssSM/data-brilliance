@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 
 import dataSystemsVisual from "@/assets/data-systems-visual.jpg";
+import { OG_IMAGE } from "@/lib/site";
 
 const linkedInUrl = "https://www.linkedin.com/in/ilyes-lakhdar-71638b26a/";
 
@@ -102,7 +103,13 @@ export const Route = createFileRoute("/")({
         content: "Power BI, automatisation du reporting et préparation des données pour transformer vos chiffres en décisions.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "fr_FR" },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Ilyes Lakhdar — Data Analyst freelance : Power BI, automatisation du reporting et applications IA" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
   }),
   component: Index,
