@@ -469,20 +469,19 @@ export const offers: Offer[] = [
   },
 ];
 
-export const referents = [
+// Sans `email`, les coordonnées sont communiquées sur demande via le formulaire de contact.
+export const referents: { name: string; role: string; organization: string; relation: string; email?: string }[] = [
   {
     name: "Laura Houry",
     role: "Responsable du pôle SI Espaces Extérieurs",
     organization: "Ville de Grenoble",
     relation: "Tutrice de stage · Observatoire du stationnement",
-    email: "laura.houry@grenoble.fr",
   },
   {
     name: "Jessica Bousquet",
     role: "Responsable R&D Matériaux",
     organization: "DIAMFAB",
     relation: "Tutrice de stage · Base de données de production",
-    email: "jessica.bousquet@diamfab.com",
   },
   {
     name: "David Faure",
