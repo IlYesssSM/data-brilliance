@@ -12,6 +12,8 @@ export type Media = {
   video?: string;
   alt: string;
   caption: string;
+  /** Logo ou visuel à afficher en entier sur fond blanc */
+  contain?: boolean;
 };
 
 export type Project = {
@@ -106,7 +108,7 @@ export const projects: Project[] = [
         caption: "Vidéo de démonstration du tableau de bord",
       },
     ],
-    logo: { alt: "Logo Ville de Grenoble", caption: "Logo Ville de Grenoble" },
+    logo: { src: "/projets/logo-ville-grenoble.png", alt: "Logo Ville de Grenoble", caption: "Ville de Grenoble" },
     featured: true,
   },
   {
@@ -149,11 +151,6 @@ export const projects: Project[] = [
     },
     gallery: [
       {
-        src: "/projets/gf38-charge-moyenne-mobile.webp",
-        alt: "Graphique de charge quotidienne et moyenne mobile sur 21 jours",
-        caption: "Charge quotidienne, moyenne mobile et ratio sur 21 jours (mesures DAX).",
-      },
-      {
         src: "/projets/gf38-metaboliques.webp",
         alt: "Rapport coach sur les indicateurs métaboliques et énergétiques, noms floutés",
         caption: "Rapport au coach : indicateurs GPS et commentaires (noms floutés).",
@@ -162,11 +159,6 @@ export const projects: Project[] = [
         src: "/projets/gf38-architecture.webp",
         alt: "Schéma de l’architecture des fichiers du projet",
         caption: "Architecture : un fichier Excel source, deux rapports Power BI.",
-      },
-      {
-        src: "/projets/gf38-modele-donnees.webp",
-        alt: "Modèle de données Power BI du projet GF38",
-        caption: "Modèle de données Power BI.",
       },
       {
         alt: "Vidéo de démonstration des rapports Power BI",
@@ -236,11 +228,13 @@ export const projects: Project[] = [
     proof:
       "Je sais m’intégrer vite dans un environnement technique exigeant et fiabiliser la saisie de données métier.",
     cover: {
-      alt: "Illustration du projet DIAMFAB (données confidentielles)",
-      caption: "Illustration ou logo DIAMFAB (captures confidentielles)",
+      src: "/projets/logo-diamfab.webp",
+      alt: "Logo DIAMFAB",
+      caption: "DIAMFAB (captures confidentielles)",
+      contain: true,
     },
     gallery: [],
-    logo: { alt: "Logo DIAMFAB", caption: "Logo DIAMFAB" },
+    logo: { src: "/projets/logo-diamfab.webp", alt: "Logo DIAMFAB", caption: "DIAMFAB" },
   },
   {
     slug: "collecte-automatisee-coupe-du-monde-rugby",

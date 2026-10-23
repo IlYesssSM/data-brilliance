@@ -57,7 +57,7 @@ function ProjectPage() {
               </div>
               {project.logo && (
                 <div className="hidden w-24 shrink-0 sm:block">
-                  <MediaFrame media={project.logo} aspect="aspect-square" fit="object-contain" className="!bg-transparent" />
+                  <MediaFrame media={project.logo} aspect="aspect-square" fit="object-contain" className="rounded bg-white p-2" />
                 </div>
               )}
             </div>
