@@ -146,6 +146,11 @@ export const projects: Project[] = [
         caption: "Architecture : un fichier Excel source, deux rapports Power BI.",
       },
       {
+        src: "/projets/gf38-modele-donnees.webp",
+        alt: "Modèle de données Power BI du projet GF38, noms des champs floutés",
+        caption: "Modèle de données Power BI (champs floutés).",
+      },
+      {
         alt: "Vidéo de démonstration des rapports Power BI",
         caption: "Vidéo de démonstration des rapports Power BI",
       },
