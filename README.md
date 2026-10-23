@@ -8,11 +8,14 @@ Site vitrine de mon activité de Data Analyst freelance à Grenoble : dashboards
 
 | Section | Contenu |
 |---|---|
-| Accueil | Spécialisation, disponibilité, message personnel |
+| Accueil | Positionnement (Data Analyst · IA & automatisation), chiffres clés |
+| Profil en 30 secondes | Spécialités, points forts, bénéfices client |
 | Expertise | Décisionnel, data engineering, automatisation & IA |
-| Parcours | Expériences et projets (Ville de Grenoble, BUT Science des Données…) |
-| Offres | A · Dashboard Power BI — B · Automatisation du reporting — C · Préparation des données |
-| Contact | Prise de contact via LinkedIn |
+| Projets | 8 projets, chacun avec sa fiche détaillée (`/projets/<slug>`) |
+| Outils | Power BI, Excel, Python, SQL, R, Claude Code, Lovable… |
+| Prestations | A · Préparation de données — B · Dashboard — C · Automatisation |
+| Référents | Tuteurs et encadrants joignables par e-mail |
+| Contact | Formulaire (envoi par e-mail via FormSubmit) + LinkedIn |
 
 ## Stack
 
@@ -45,15 +48,23 @@ bun run dev        # ou npm run dev
 src/
 ├── routes/
 │   ├── __root.tsx     # Layout HTML, métadonnées globales, pages 404 / erreur
-│   └── index.tsx      # Page unique du portfolio (sections + contenus)
+│   ├── index.tsx      # Page d’accueil (sections)
+│   └── projets/$slug.tsx  # Fiche détaillée d’un projet
+├── components/site.tsx  # En-tête, pied de page, médias, formulaire de contact
+├── data/portfolio.ts    # Tous les contenus du site
 ├── lib/site.ts        # URL publique du site (utilisée pour l'image de partage)
 ├── assets/            # Visuel de l'en-tête
 └── styles.css         # Thème (couleurs, typographies, effets)
 public/
-└── og-image.jpg       # Image d'aperçu pour LinkedIn et les réseaux sociaux
+├── og-image.jpg       # Image d'aperçu pour LinkedIn et les réseaux sociaux
+└── projets/           # Captures des projets
 ```
 
-Les contenus (compétences, offres, projets) sont définis sous forme de tableaux en haut de `src/routes/index.tsx` : il suffit de les modifier pour mettre à jour le site.
+Les contenus (projets, outils, prestations, référents) sont centralisés dans `src/data/portfolio.ts`. Pour ajouter une capture ou une vidéo, déposer le fichier dans `public/projets/` et renseigner `src` ou `video` sur le média concerné : tant qu’un média n’a pas de source, le site affiche un emplacement vide `[ … ]`.
+
+## Formulaire de contact
+
+Le formulaire envoie les messages à l’adresse définie dans `contactEmail` via [FormSubmit](https://formsubmit.co). Au tout premier envoi, FormSubmit envoie un e-mail de confirmation à cette adresse : il faut cliquer sur le lien d’activation une seule fois.
 
 ## Configuration
 
