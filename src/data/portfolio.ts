@@ -240,7 +240,7 @@ export const projects: Project[] = [
     slug: "collecte-automatisee-coupe-du-monde-rugby",
     category: "Projet académique",
     title: "Collecte automatisée de données web",
-    organization: "BUT Science des Données · IUT2 Grenoble",
+    organization: "BUT Science des Données · Université Grenoble Alpes",
     period: "2023",
     role: "Développement Python",
     summary:
@@ -297,7 +297,7 @@ export const projects: Project[] = [
     slug: "benchmark-big-data-spark",
     category: "Projet académique",
     title: "Benchmark Big Data : Python vs Spark",
-    organization: "BUT Science des Données · IUT2 Grenoble",
+    organization: "BUT Science des Données · Université Grenoble Alpes",
     period: "2025",
     role: "Projet en binôme",
     summary:
@@ -326,7 +326,7 @@ export const projects: Project[] = [
     slug: "prevision-series-temporelles",
     category: "Projet académique",
     title: "Prévision de séries temporelles",
-    organization: "BUT Science des Données · IUT2 Grenoble",
+    organization: "BUT Science des Données · Université Grenoble Alpes",
     period: "2023",
     role: "Projet en binôme",
     summary:

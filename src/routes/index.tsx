@@ -8,6 +8,7 @@ import {
   Check,
   Database,
   Gauge,
+  GraduationCap,
   Linkedin,
   Mail,
   ShieldCheck,
@@ -199,9 +200,18 @@ function Index() {
                 );
               })}
             </div>
-            <p className="mt-6 text-sm text-muted-foreground">
-              Formation : BUT Science des Données, IUT2 Grenoble, parcours Visualisation et conception d’outils décisionnels (VCOD).
-            </p>
+            <div className="mt-4 flex items-start gap-4 border border-border bg-surface p-6">
+              <GraduationCap className="mt-0.5 size-5 shrink-0 text-primary" strokeWidth={1.5} aria-hidden="true" />
+              <div>
+                <p className="font-display text-lg font-semibold">
+                  Formation universitaire · Bachelor Universitaire de Technologie (BUT) Science des Données
+                </p>
+                <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                  Diplôme national Bac+3 · IUT2 Grenoble, Université Grenoble Alpes · Parcours Visualisation et conception
+                  d’outils décisionnels (VCOD)
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
