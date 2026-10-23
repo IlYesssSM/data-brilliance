@@ -103,6 +103,9 @@ export function MediaFrame({ media, className = "", aspect = "aspect-video", fit
     );
   }
   if (media.src) {
+    if (media.contain) {
+      return <img src={media.src} alt={media.alt} loading="lazy" className={`${aspect} w-full bg-white object-contain p-6 ${className}`} />;
+    }
     return <img src={media.src} alt={media.alt} loading="lazy" className={`${aspect} w-full ${fit} ${fit === "object-cover" ? "bg-white object-top" : "object-center"} ${className}`} />;
   }
   const isVideo = /vidéo/i.test(media.caption);

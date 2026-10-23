@@ -8,6 +8,7 @@ import {
   Check,
   Database,
   Gauge,
+  GraduationCap,
   Linkedin,
   Mail,
   ShieldCheck,
@@ -199,9 +200,18 @@ function Index() {
                 );
               })}
             </div>
-            <p className="mt-6 text-sm text-muted-foreground">
-              Formation : BUT Science des Données, IUT2 Grenoble, parcours Visualisation et conception d’outils décisionnels (VCOD).
-            </p>
+            <div className="mt-4 flex items-start gap-4 border border-border bg-surface p-6">
+              <GraduationCap className="mt-0.5 size-5 shrink-0 text-primary" strokeWidth={1.5} aria-hidden="true" />
+              <div>
+                <p className="font-display text-lg font-semibold">
+                  Formation universitaire · Bachelor Universitaire de Technologie (BUT) Science des Données
+                </p>
+                <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                  Diplôme national Bac+3 · IUT2 Grenoble, Université Grenoble Alpes · Parcours Visualisation et conception
+                  d’outils décisionnels (VCOD)
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -384,7 +394,7 @@ function Index() {
 
             <div className="mt-14 grid gap-4 md:grid-cols-3">
               {referents.map((referent) => (
-                <article key={referent.email} className="flex flex-col border border-border bg-background p-6 sm:p-7">
+                <article key={referent.name} className="flex flex-col border border-border bg-background p-6 sm:p-7">
                   <span className="grid size-12 place-items-center rounded-full bg-primary/15 font-display text-lg font-semibold text-primary" aria-hidden="true">
                     {referent.name.split(" ").map((part) => part[0]).join("")}
                   </span>
@@ -392,12 +402,21 @@ function Index() {
                   <p className="mt-1 text-sm text-foreground/85">{referent.role}</p>
                   <p className="text-sm text-muted-foreground">{referent.organization}</p>
                   <p className="mt-4 font-mono text-xs uppercase text-primary">{referent.relation}</p>
-                  <a
-                    href={`mailto:${referent.email}`}
-                    className="mt-auto inline-flex items-center gap-2 break-all pt-6 text-sm text-foreground/80 transition-colors hover:text-primary"
-                  >
-                    <Mail className="size-4 shrink-0" aria-hidden="true" /> {referent.email}
-                  </a>
+                  {referent.email ? (
+                    <a
+                      href={`mailto:${referent.email}`}
+                      className="mt-auto inline-flex items-center gap-2 break-all pt-6 text-sm text-foreground/80 transition-colors hover:text-primary"
+                    >
+                      <Mail className="size-4 shrink-0" aria-hidden="true" /> {referent.email}
+                    </a>
+                  ) : (
+                    <a
+                      href="#contact"
+                      className="mt-auto inline-flex items-center gap-2 pt-6 text-sm text-foreground/80 transition-colors hover:text-primary"
+                    >
+                      <Mail className="size-4 shrink-0" aria-hidden="true" /> Coordonnées sur demande
+                    </a>
+                  )}
                 </article>
               ))}
             </div>
