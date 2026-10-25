@@ -84,24 +84,9 @@ export const projects: Project[] = [
         caption: "Chaîne ETL : macro VBA ×45, fusion Python, contrôle SQL, puis Power BI et QGIS.",
       },
       {
-        src: "/projets/grenoble-dashboard-zones.webp",
-        alt: "Tableau de bord Power BI par zone tarifaire",
-        caption: "Vue par zone tarifaire (verte, violette, orange).",
-      },
-      {
-        src: "/projets/grenoble-dashboard-secteurs-zones.webp",
-        alt: "Tableau de bord Power BI croisant zones et secteurs",
-        caption: "Croisement zones × secteurs et relation entre les trois taux.",
-      },
-      {
         src: "/projets/grenoble-carte-occupation-2024.webp",
         alt: "Carte QGIS du taux d’occupation par secteur en 2024",
         caption: "Carte QGIS : taux d’occupation par secteur en 2024.",
-      },
-      {
-        src: "/projets/grenoble-carte-respect-2024.webp",
-        alt: "Carte QGIS du taux de respect par secteur en 2024",
-        caption: "Carte QGIS : taux de respect par secteur en 2024.",
       },
       {
         alt: "Vidéo de démonstration du tableau de bord",
@@ -159,6 +144,11 @@ export const projects: Project[] = [
         src: "/projets/gf38-architecture.webp",
         alt: "Schéma de l’architecture des fichiers du projet",
         caption: "Architecture : un fichier Excel source, deux rapports Power BI.",
+      },
+      {
+        src: "/projets/gf38-modele-donnees.webp",
+        alt: "Modèle de données Power BI du projet GF38, noms des champs floutés",
+        caption: "Modèle de données Power BI (champs floutés).",
       },
       {
         alt: "Vidéo de démonstration des rapports Power BI",
