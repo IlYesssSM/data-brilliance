@@ -194,10 +194,16 @@ export const projects: Project[] = [
       { label: "Voir la démo vidéo sur LinkedIn", url: "https://lnkd.in/p/eW5S9Tqs" },
     ],
     cover: {
-      alt: "Capture de l’application UCL Hub",
-      caption: "Capture de l’application UCL Hub",
+      src: "/projets/ucl-hub-accueil.webp",
+      alt: "Page d’accueil de l’application UCL Hub",
+      caption: "Accueil : saison en cours, prochain match avec compte à rebours et derniers résultats.",
     },
     gallery: [
+      {
+        src: "/projets/ucl-hub-buteurs-classement.webp",
+        alt: "Top buteurs et top 5 du classement dans UCL Hub",
+        caption: "Top buteurs et top 5 du classement, mis à jour depuis l’API football-data.org.",
+      },
       {
         alt: "Vidéo de démonstration de l’application UCL Hub",
         caption: "Vidéo de démonstration (post LinkedIn)",
