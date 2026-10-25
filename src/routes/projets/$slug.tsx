@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, Check, Mail } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Mail } from "lucide-react";
 
 import { MediaFrame, SiteFooter, SiteHeader } from "@/components/site";
 import { getProject, projects } from "@/data/portfolio";
@@ -69,6 +69,22 @@ function ProjectPage() {
             </dl>
 
             <p className="mt-8 text-lg leading-8 text-foreground/90">{project.summary}</p>
+
+            {project.links && (
+              <div className="mt-6 flex flex-wrap gap-3">
+                {project.links.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex h-10 items-center gap-2 border border-primary/70 bg-primary/10 px-4 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                  >
+                    {link.label} <ArrowUpRight className="size-4" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
+            )}
 
             {project.figures.length > 0 && (
               <dl className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">

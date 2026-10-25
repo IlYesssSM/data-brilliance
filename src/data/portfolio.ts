@@ -35,6 +35,8 @@ export type Project = {
   cover: Media;
   gallery: Media[];
   logo?: Media;
+  /** Liens externes (application en ligne, dépôt public…) */
+  links?: { label: string; url: string }[];
   featured?: boolean;
 };
 
@@ -170,31 +172,42 @@ export const projects: Project[] = [
   {
     slug: "application-ia-champions-league",
     category: "Projet IA",
-    title: "Application IA — Ligue des champions",
+    title: "UCL Hub — application Ligue des champions",
     organization: "Projet personnel",
-    role: "Conception et développement",
+    role: "Conception et développement assistés par IA",
     summary:
-      "Une application construite avec des outils d’IA pour explorer et visualiser des données de la Ligue des champions. Démonstration vidéo disponible sur LinkedIn.",
-    tags: ["IA", "Application web", "Data visualisation", "Prototypage rapide"],
-    figures: [],
-    context:
-      "Projet personnel pour tester jusqu’où l’IA permet d’accélérer la création d’un outil de données complet, de la donnée brute à l’interface.",
-    actions: [
-      "Collecte et préparation des données de la compétition.",
-      "Développement de l’application avec l’assistance d’outils d’IA.",
-      "Mise en forme des visualisations et démonstration vidéo.",
+      "Une application web qui affiche en direct les données de la Ligue des champions (matchs, classement, buteurs et passeurs) à partir d’une API, construite avec Lovable en un temps record.",
+    tags: ["IA · Lovable", "API", "TypeScript", "Supabase", "Cache de données"],
+    figures: [
+      { value: "4", label: "pages : accueil, matchs, classement, joueurs" },
+      { value: "1 h / 6 h", label: "de cache selon la donnée" },
+      { value: "0", label: "clé d’API exposée côté navigateur" },
     ],
-    results: ["Une application fonctionnelle, présentée en vidéo sur mon profil LinkedIn."],
+    context:
+      "Montrer qu’avec l’IA, on peut livrer rapidement un outil de données complet et fiable : de l’appel à une API externe jusqu’à une interface claire, en production.",
+    actions: [
+      "Connexion à l’API football-data.org via des fonctions serveur : la clé d’API ne quitte jamais le serveur.",
+      "Cache des réponses dans une base Supabase (PostgreSQL), rafraîchi toutes les heures pour les matchs et toutes les 6 h pour le classement et les buteurs.",
+      "Repli automatique sur les données en cache si l’API est indisponible ou si le quota de requêtes est atteint.",
+      "Accueil avec prochain match et compte à rebours, derniers résultats, top buteurs et top 5 du classement.",
+      "Matchs regroupés par phase et par journée, filtrables par équipe ou par recherche ; classement triable avec zones de qualification ; top 10 buteurs et passeurs.",
+      "Développement piloté par prompts avec Lovable (TanStack Start, React, TypeScript, Tailwind), puis vérification du code et des données.",
+    ],
+    results: [
+      "Une application en ligne, toujours à jour, sans saisie manuelle.",
+      "Une architecture qui respecte les limites de l’API et reste disponible même en cas de panne de la source.",
+    ],
     proof:
-      "Je sais m’appuyer sur l’IA pour livrer rapidement un outil de données utilisable, pas seulement une maquette.",
+      "Je sais m’appuyer sur l’IA pour livrer vite un outil de données connecté à une source externe, robuste et prêt à l’emploi, pas seulement une maquette.",
+    links: [{ label: "Voir l’application en ligne", url: "https://ucl-hub.lovable.app" }],
     cover: {
-      alt: "Capture de l’application IA Ligue des champions",
-      caption: "Capture de l’application",
+      alt: "Capture de l’application UCL Hub",
+      caption: "Capture de l’application UCL Hub",
     },
     gallery: [
       {
-        alt: "Vidéo de démonstration de l’application IA Ligue des champions",
-        caption: "Vidéo de démonstration de l’application",
+        alt: "Vidéo de démonstration de l’application UCL Hub",
+        caption: "Vidéo de démonstration (post LinkedIn)",
       },
     ],
   },
@@ -394,6 +407,7 @@ export const toolGroups: { title: string; tools: Tool[] }[] = [
     tools: [
       { name: "Claude Code", monogram: "CC", usage: "Développement et automatisation assistés par IA", color: "#D97757" },
       { name: "Lovable", monogram: "LV", usage: "Applications web en quelques jours", color: "#FF5C8A" },
+      { name: "Supabase", monogram: "SB", usage: "Base PostgreSQL et cache pour applications", color: "#3ECF8E" },
     ],
   },
 ];
