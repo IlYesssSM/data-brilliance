@@ -176,7 +176,7 @@ export const projects: Project[] = [
     organization: "Projet personnel",
     role: "Conception et développement assistés par IA",
     summary:
-      "Une application web qui affiche en direct les données de la Ligue des champions (matchs, classement, buteurs et passeurs) à partir d’une API, construite avec Lovable en un temps record.",
+      "Une application web qui affiche en direct les données de la Ligue des champions (matchs, classement, buteurs et passeurs) à partir d’une API, construite avec Lovable en un temps record. Démonstration vidéo disponible sur LinkedIn.",
     tags: ["IA · Lovable", "API", "TypeScript", "Supabase", "Cache de données"],
     figures: [
       { value: "4", label: "pages : accueil, matchs, classement, joueurs" },
@@ -199,7 +199,10 @@ export const projects: Project[] = [
     ],
     proof:
       "Je sais m’appuyer sur l’IA pour livrer vite un outil de données connecté à une source externe, robuste et prêt à l’emploi, pas seulement une maquette.",
-    links: [{ label: "Voir l’application en ligne", url: "https://ucl-hub.lovable.app" }],
+    links: [
+      { label: "Voir l’application en ligne", url: "https://ucl-hub.lovable.app" },
+      { label: "Voir la démo vidéo sur LinkedIn", url: "https://lnkd.in/p/eW5S9Tqs" },
+    ],
     cover: {
       alt: "Capture de l’application UCL Hub",
       caption: "Capture de l’application UCL Hub",
