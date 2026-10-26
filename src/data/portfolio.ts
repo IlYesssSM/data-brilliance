@@ -414,7 +414,6 @@ export const toolGroups: { title: string; tools: Tool[] }[] = [
 export type Offer = {
   letter: string;
   name: string;
-  price: string;
   title: string;
   description: string;
   features: string[];
@@ -426,7 +425,6 @@ export const offers: Offer[] = [
   {
     letter: "A",
     name: "Préparation de données",
-    price: "À partir de 400 €",
     title: "Des données propres, prêtes à être analysées.",
     description:
       "Vos fichiers sont dispersés, en doublon ou incohérents ? Je les nettoie, les fusionne et les structure pour fiabiliser toutes vos analyses.",
@@ -443,7 +441,6 @@ export const offers: Offer[] = [
   {
     letter: "B",
     name: "Dashboard",
-    price: "À partir de 850 €",
     title: "Vos fichiers Excel deviennent un tableau de bord.",
     description:
       "Un dashboard Power BI interactif, pensé pour vos décisions et transmissible à vos équipes, avec une courte formation à la prise en main.",
@@ -460,7 +457,6 @@ export const offers: Offer[] = [
   {
     letter: "C",
     name: "Automatisation",
-    price: "À partir de 1 100 €",
     title: "Supprimez vos tâches répétitives grâce à l’IA.",
     description:
       "Reporting qui s’actualise seul, scripts de consolidation, petite application IA sur mesure : vous récupérez le temps passé à copier-coller.",
