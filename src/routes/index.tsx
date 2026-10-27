@@ -337,11 +337,10 @@ function Index() {
             <div className="mt-14 grid gap-4 lg:grid-cols-3">
               {offers.map((offer) => (
                 <article key={offer.letter} className="group flex flex-col border border-border bg-surface p-6 transition-all hover:-translate-y-1 hover:border-primary/60 sm:p-7">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center">
                     <span className={`grid size-9 place-items-center rounded-full font-mono text-sm font-bold ${offer.accentClass}`}>
                       {offer.letter}
                     </span>
-                    <span className="font-display text-lg font-semibold">{offer.price}</span>
                   </div>
                   <p className="mt-8 font-mono text-xs uppercase text-muted-foreground">Prestation {offer.letter} · {offer.name}</p>
                   <h3 className="mt-3 font-display text-2xl font-semibold leading-8">{offer.title}</h3>
@@ -360,7 +359,7 @@ function Index() {
                       href="#contact"
                       className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-strong"
                     >
-                      Demander un devis <ArrowRight className="size-4" aria-hidden="true" />
+                      Me contacter <ArrowRight className="size-4" aria-hidden="true" />
                     </a>
                   </div>
                 </article>
@@ -368,7 +367,7 @@ function Index() {
             </div>
 
             <p className="mt-5 text-xs text-muted-foreground">
-              Tarifs indicatifs pour un périmètre simple. Le prix final est fixé dans le devis, après un premier échange gratuit.
+              Chaque mission fait l’objet d’un devis sur mesure, établi après un premier échange gratuit.
             </p>
 
             <ol className="mt-12 grid gap-4 md:grid-cols-3">
