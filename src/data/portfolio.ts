@@ -153,8 +153,9 @@ export const projects: Project[] = [
         caption: "Modèle de données Power BI (champs floutés).",
       },
       {
-        alt: "Vidéo de démonstration des rapports Power BI",
-        caption: "Vidéo de démonstration des rapports Power BI",
+        video: "/projets/gf38-demo-session.mp4",
+        alt: "Démonstration du rapport Power BI d’aperçu d’une session d’entraînement, noms des joueurs floutés",
+        caption: "Démonstration : filtres par date et par joueur sur l’aperçu d’une session (noms floutés).",
       },
     ],
     logo: { src: "/projets/logo-gf38.png", alt: "Logo Grenoble Foot 38", caption: "Grenoble Foot 38" },
