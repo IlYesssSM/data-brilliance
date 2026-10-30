@@ -300,10 +300,22 @@ export const projects: Project[] = [
     results: ["Des analyses statistiques explorables sans écrire une ligne de code."],
     proof: "Je sais transformer une analyse statistique en outil interactif.",
     cover: {
-      alt: "Capture de l’application R Shiny",
-      caption: "Capture de l’application Shiny",
+      src: "/projets/rshiny-acp.webp",
+      alt: "Application R Shiny « Analyse sur le GF38 » : analyse en composantes principales",
+      caption: "Analyse en composantes principales : variances des dimensions et projection des joueurs.",
     },
-    gallery: [],
+    gallery: [
+      {
+        src: "/projets/rshiny-tableau.webp",
+        alt: "Application R Shiny : tableau récapitulatif des données primaires, joueurs anonymisés",
+        caption: "Tableau récapitulatif des données, joueurs anonymisés.",
+      },
+      {
+        src: "/projets/rshiny-histogramme.webp",
+        alt: "Application R Shiny : histogramme du temps de jeu des joueurs",
+        caption: "Histogramme du temps de jeu, avec choix du jeu de données (GF38, Ligue 1, Ligue 2).",
+      },
+    ],
     logo: { src: "/projets/logo-gf38.png", alt: "Logo Grenoble Foot 38", caption: "Grenoble Foot 38" },
   },
   {
