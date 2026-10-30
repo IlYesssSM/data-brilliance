@@ -36,7 +36,7 @@ const atAGlance = [
   {
     icon: ShieldCheck,
     title: "Points forts",
-    items: ["Expérience terrain en collectivité, start-up et club pro", "Outils documentés et transmis", "Langage clair, sans jargon", "Rapidité d’exécution grâce à l’IA"],
+    items: ["Expérience terrain en collectivité, start-up et club pro", "Outils documentés et transmis", "Dashboard clair et intuitif", "Rapidité d’exécution grâce à l’IA"],
   },
   {
     icon: Zap,
