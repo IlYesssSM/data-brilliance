@@ -367,7 +367,7 @@ function Index() {
             </div>
 
             <p className="mt-5 text-xs text-muted-foreground">
-              Chaque mission fait l’objet d’un devis sur mesure, établi après un premier échange gratuit.
+              {"\n"}
             </p>
 
             <ol className="mt-12 grid gap-4 md:grid-cols-3">
