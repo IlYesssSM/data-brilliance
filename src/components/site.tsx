@@ -212,7 +212,7 @@ export function ContactForm() {
               <a href={`mailto:${contactEmail}`} className="underline">{contactEmail}</a>.
             </span>
           )}
-          {(status === "idle" || status === "sending") && "Réponse sous 48 h · premier échange gratuit et sans engagement."}
+          {(status === "idle" || status === "sending") && "Réponse sous 48 h."}
         </p>
       </div>
     </form>
