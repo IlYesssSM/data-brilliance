@@ -43,34 +43,34 @@
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   --radius: 0.25rem;
-  --background: oklch(0.105 0.015 256);
-  --foreground: oklch(0.96 0.01 250);
-  --card: oklch(0.145 0.021 256);
-  --card-foreground: oklch(0.96 0.01 250);
-  --popover: oklch(0.145 0.021 256);
-  --popover-foreground: oklch(0.96 0.01 250);
-  --primary: oklch(0.69 0.19 245);
-  --primary-strong: oklch(0.77 0.16 235);
-  --primary-foreground: oklch(0.1 0.02 255);
-  --secondary: oklch(0.19 0.026 255);
-  --secondary-foreground: oklch(0.93 0.01 250);
-  --muted: oklch(0.19 0.02 255);
-  --muted-foreground: oklch(0.69 0.025 250);
-  --accent: oklch(0.25 0.06 248);
-  --accent-foreground: oklch(0.95 0.01 250);
-  --destructive: oklch(0.62 0.21 25);
-  --destructive-foreground: oklch(0.98 0.01 250);
-  --border: oklch(0.29 0.025 255);
-  --input: oklch(0.23 0.025 255);
-  --ring: oklch(0.69 0.19 245);
-  --surface: oklch(0.125 0.018 256);
-  --panel: oklch(0.17 0.028 255);
-  --success: oklch(0.76 0.18 151);
-  --offer-green: oklch(0.76 0.18 151);
-  --offer-yellow: oklch(0.82 0.16 85);
-  --offer-blue: oklch(0.7 0.18 245);
+  --background: oklch(0.985 0.004 250);
+  --foreground: oklch(0.24 0.03 258);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.03 258);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.03 258);
+  --primary: oklch(0.52 0.17 255);
+  --primary-strong: oklch(0.44 0.16 258);
+  --primary-foreground: oklch(0.99 0.003 250);
+  --secondary: oklch(0.955 0.012 250);
+  --secondary-foreground: oklch(0.28 0.03 258);
+  --muted: oklch(0.955 0.008 250);
+  --muted-foreground: oklch(0.47 0.025 256);
+  --accent: oklch(0.94 0.03 250);
+  --accent-foreground: oklch(0.3 0.08 258);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.99 0.003 250);
+  --border: oklch(0.9 0.012 252);
+  --input: oklch(0.86 0.015 252);
+  --ring: oklch(0.52 0.17 255);
+  --surface: oklch(0.965 0.008 250);
+  --panel: oklch(1 0 0);
+  --success: oklch(0.55 0.14 151);
+  --offer-green: oklch(0.55 0.14 151);
+  --offer-yellow: oklch(0.6 0.14 65);
+  --offer-blue: oklch(0.52 0.17 255);
 }
 
 * {
@@ -96,6 +96,11 @@ a {
   outline-offset: 4px;
 }
 
+/* Le visuel d’origine est sombre : on l’inverse pour un fond clair aux traits bleus. */
+.hero-visual {
+  filter: invert(1) hue-rotate(180deg) saturate(1.2);
+}
+
 .hero-shade {
   background:
     linear-gradient(90deg, var(--background) 4%, color-mix(in oklab, var(--background) 94%, transparent) 39%, color-mix(in oklab, var(--background) 36%, transparent) 76%),
@@ -111,14 +116,13 @@ a {
 }
 
 .project-card {
-  background:
-    linear-gradient(145deg, color-mix(in oklab, var(--panel) 94%, transparent), color-mix(in oklab, var(--background) 92%, transparent));
-  box-shadow: inset 0 1px 0 color-mix(in oklab, var(--foreground) 3%, transparent);
+  background: var(--panel);
+  box-shadow: 0 1px 2px color-mix(in oklab, var(--foreground) 6%, transparent), 0 8px 24px -12px color-mix(in oklab, var(--foreground) 14%, transparent);
 }
 
 .project-card-featured {
   background:
-    linear-gradient(145deg, color-mix(in oklab, var(--primary) 18%, var(--panel)), var(--background) 76%);
+    linear-gradient(145deg, color-mix(in oklab, var(--primary) 9%, var(--panel)), var(--panel) 76%);
 }
 
 .project-card::after {
