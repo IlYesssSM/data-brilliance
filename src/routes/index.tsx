@@ -117,7 +117,7 @@ function Index() {
             alt=""
             width={1600}
             height={1000}
-            className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-65"
+            className="hero-visual absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-60"
           />
           <div className="hero-shade absolute inset-0 -z-10" />
           <div className="hero-grid absolute inset-0 -z-10 opacity-50" />
