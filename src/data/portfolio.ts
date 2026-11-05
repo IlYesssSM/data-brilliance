@@ -112,7 +112,7 @@ export const projects: Project[] = [
       { value: "5", label: "sources Excel modélisées" },
       { value: "66", label: "variables GPS exploitées" },
       { value: "3", label: "rapports Power BI livrés" },
-      { value: "1 an", label: "de projet avec un vrai client" },
+      { value: "4 mois", label: "de projet avec un vrai client" },
     ],
     context:
       "L’entraîneur adjoint en charge de la performance du GF38 consolidait à la main des données GPS, de ressenti (RPE / wellness) et de poids. Objectif : comparer entraînements et matchs et produire un rapport clair pour le coach.",
