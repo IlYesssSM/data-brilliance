@@ -70,7 +70,7 @@ const skillGroups = [
 ];
 
 const steps = [
-  { title: "Échange gratuit", text: "30 minutes pour comprendre vos fichiers, vos usages et ce qui vous fait perdre du temps." },
+  { title: "Échange initial", text: "30 minutes pour comprendre vos fichiers, vos usages et ce qui vous fait perdre du temps." },
   { title: "Devis clair", text: "Un périmètre, un prix ferme et un délai. Pas de surprise en cours de route." },
   { title: "Livraison accompagnée", text: "L’outil, sa documentation et une prise en main avec vos équipes." },
 ];
