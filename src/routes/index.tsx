@@ -117,7 +117,7 @@ function Index() {
             alt=""
             width={1600}
             height={1000}
-            className="hero-visual absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-60"
+            className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-70"
           />
           <div className="hero-shade absolute inset-0 -z-10" />
           <div className="hero-grid absolute inset-0 -z-10 opacity-50" />
@@ -125,7 +125,7 @@ function Index() {
           <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 sm:py-14 lg:px-10 lg:py-16">
             <div className="flex items-center justify-between border-b border-border/70 pb-5 text-xs text-muted-foreground">
               <span className="flex items-center gap-2 uppercase tracking-widest">
-                <span className="size-2 animate-pulse rounded-full bg-success" /> Disponible pour de nouvelles missions
+                <span className="size-2 animate-pulse rounded-full bg-success" /> Disponible
               </span>
               <span className="hidden sm:inline">Grenoble · France · à distance</span>
             </div>
@@ -133,7 +133,7 @@ function Index() {
             <div className="max-w-4xl py-14 sm:py-20">
               <div className="mb-5 flex items-center gap-3 text-sm text-primary">
                 <span className="h-px w-9 bg-primary" />
-                Data Analyst freelance · IA & automatisation
+                Data Analyst · IA & automatisation
               </div>
               <h1 className="font-display text-5xl font-semibold leading-[0.98] sm:text-7xl lg:text-8xl">
                 Vos données,
