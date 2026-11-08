@@ -78,8 +78,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ilyes Lakhdar — Data Analyst freelance" },
-      { name: "description", content: "Portfolio Data Analyst freelance : Power BI, automatisation et applications IA." },
+      { title: "Ilyes Lakhdar - Portfolio Data Analyst" },
+      { name: "description", content: "Portfolio Data Analyst : Power BI, automatisation et applications IA." },
       { name: "author", content: "Ilyes Lakhdar" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
