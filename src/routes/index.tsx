@@ -78,13 +78,13 @@ const steps = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ilyes Lakhdar — Data Analyst freelance · IA & automatisation" },
+      { title: "Ilyes Lakhdar - Portfolio Data Analyst" },
       {
         name: "description",
         content:
-          "Data Analyst freelance à Grenoble : préparation de données, dashboards Power BI, automatisation du reporting et applications IA pour PME et organismes.",
+          "Data Analyst à Grenoble : préparation de données, dashboards Power BI, automatisation du reporting et applications IA pour PME et organismes.",
       },
-      { property: "og:title", content: "Ilyes Lakhdar — Data Analyst freelance · IA & automatisation" },
+      { property: "og:title", content: "Ilyes Lakhdar - Portfolio Data Analyst" },
       {
         property: "og:description",
         content: "Dashboards Power BI, automatisation du reporting et applications IA pour transformer vos chiffres en décisions.",
@@ -94,7 +94,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Ilyes Lakhdar — Data Analyst freelance : Power BI, automatisation du reporting et applications IA" },
+      { property: "og:image:alt", content: "Ilyes Lakhdar - Portfolio Data Analyst : Power BI, automatisation du reporting et applications IA" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: OG_IMAGE },
     ],
